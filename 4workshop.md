@@ -245,6 +245,9 @@ public class ChangeColor : MonoBehaviour
 ![image](https://github.com/kirosh1q/GameDev/assets/119981696/129387f9-cc5e-4905-ac4d-aaed3754140e)
 ![image](https://github.com/kirosh1q/GameDev/assets/119981696/b98127aa-bf8c-4811-8a6e-8472400b457f)
 
+Ссылка на репозиторий с лабами и этим проектом: https://github.com/kirosh1q/GameDev 
+Проект папка - GIT4
+
 
 
 
