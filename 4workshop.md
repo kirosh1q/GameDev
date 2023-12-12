@@ -162,5 +162,100 @@ public class Perceptron : MonoBehaviour {
 Ссылка на таблицу: https://docs.google.com/spreadsheets/d/11cK2e7T0zh_XdT0kWbUFzL4QxKfrM4VvTeJd746p6xs/edit?hl=ru#gid=0
 
 
+## Задание 3
+### Визуализировать работу персептрона на сцене Unity
+Ход работы:
+- Создать префабы с кубиками, где будет объект и триггер, после прохождения которого падающий куб будет менять цвет в соответствии с написанным для этого кодом.
+-  Поставить значения для реализации операций OR AND NAND XOR
+
+```C#
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class ChangeColor : MonoBehaviour
+{
+    [SerializeField] private int numberType;
+    private Material material;
+    [SerializeField] private int numberTrigger;
+    [SerializeField] private Material[] materials;
+
+    void Start()
+    {
+        material = GetComponent<MeshRenderer>().material;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        switch (SceneManager.GetActiveScene().buildIndex)
+        {
+            case 0:
+                OR();
+                break;
+            case 1:
+                AND();
+                break;
+            case 2:
+                NAND();
+                break;
+            case 3:
+                XOR();
+                break;
+        }
+        Destroy(other.gameObject);
+    }
+
+    private void OR()
+    {
+        bool isTriggerOne = numberTrigger == 1;
+        material.color = materials[isTriggerOne || numberType == 1 ? 1 : 0].color;
+    }
+
+    private void AND()
+    {
+        bool isTriggerAndTypeOne = numberTrigger == 1 && numberType == 1;
+        material.color = materials[isTriggerAndTypeOne ? 1 : 0].color;
+    }
+
+    private void NAND()
+    {
+        bool isNand = !(numberTrigger == 1 && numberType == 1);
+        material.color = materials[isNand ? 1 : 0].color;
+    }
+
+    private void XOR()
+    {
+        bool isXor = numberTrigger == 1 ^ numberType == 1;
+        material.color = materials[isXor ? 1 : 0].color;
+    }
+}
+```
+### Выполнение OR
+![image](https://github.com/kirosh1q/GameDev/assets/119981696/3f74c94f-41df-4d31-bd99-492e75ffb82b)
+![image](https://github.com/kirosh1q/GameDev/assets/119981696/7ee6de0c-1a40-47e0-866f-5bc6f6211506)
+
+### Выполнение AND
+![image](https://github.com/kirosh1q/GameDev/assets/119981696/b72bbdea-99fa-4dbb-a712-60ccefbe6886)
+![image](https://github.com/kirosh1q/GameDev/assets/119981696/30906f46-9eae-479a-b1f7-d2b12777eb8f)
+
+### Выполнение NAND
+![image](https://github.com/kirosh1q/GameDev/assets/119981696/25186f6b-ad68-457b-b183-a44a401b9d3c)
+![image](https://github.com/kirosh1q/GameDev/assets/119981696/62fef936-c585-42d4-93c9-c003a9e4f3bf)
+
+### Выполнение XOR
+![image](https://github.com/kirosh1q/GameDev/assets/119981696/129387f9-cc5e-4905-ac4d-aaed3754140e)
+![image](https://github.com/kirosh1q/GameDev/assets/119981696/b98127aa-bf8c-4811-8a6e-8472400b457f)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
