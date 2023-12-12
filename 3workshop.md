@@ -31,7 +31,8 @@
 
 ![image](https://github.com/kirosh1q/GameDev/assets/119981696/f2e7bc44-f4c6-4e5f-8ade-ad5ae26748d4)
 
-![image](https://github.com/kirosh1q/GameDev/assets/119981696/033284fc-4755-46e0-ac20-f194af659a69)
+![image](https://github.com/kirosh1q/GameDev/assets/119981696/00c7102c-bc81-4b94-9de7-23d5c6d68ca0)
+
 
 Ссылка на таблицу: https://docs.google.com/spreadsheets/d/1R398lWjRg-7g-Y2anS58HKJFw2A_9JsdgdcEWSb4Am4/edit?hl=ru#gid=0
 
